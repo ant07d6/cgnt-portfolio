@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Ivanilson António is a Motion Designer, VFX Artist and 3D Artist focused on creating modern cinematic visuals, immersive experiences and emotionally driven digital storytelling.">
+  <meta name="keywords" content="Motion Designer, motion graphics, cg, blender, after effects, cinematics, vfx, 3d, motion design">
+  <meta name="author" content="Ivanilson António">
+
+  <title>Ivanilson | CG Artist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- SCROLLTRIGGER -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <!-- Lenis -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <!-- THREE JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three":"https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!-- LOADING SCREEN -->
+
+  <div class="loader">
+    <svg height="128px" width="128px" viewBox="0 0 128 128" class="pl1">
+      <defs>
+        <linearGradient y2="1" x2="1" y1="0" x1="0" id="pl-grad">
+          <stop stop-color="#000" offset="0%"></stop>
+          <stop stop-color="#fff" offset="100%"></stop>
+        </linearGradient>
+        <mask id="pl-mask">
+          <rect fill="url(#pl-grad)" height="128" width="128" y="0" x="0"></rect>
+        </mask>
+      </defs>
+      <g fill="var(--primary)">
+        <g class="pl1__g">
+          <g transform="translate(20,20) rotate(0,44,44)">
+            <g class="pl1__rect-g">
+              <rect height="40" width="40" ry="8" rx="8" class="pl1__rect"></rect>
+              <rect transform="translate(0,48)" height="40" width="40" ry="8" rx="8" class="pl1__rect"></rect>
+            </g>
+            <g transform="rotate(180,44,44)" class="pl1__rect-g">
+              <rect height="40" width="40" ry="8" rx="8" class="pl1__rect"></rect>
+              <rect transform="translate(0,48)" height="40" width="40" ry="8" rx="8" class="pl1__rect"></rect>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g mask="url(#pl-mask)" fill="hsl(343,0%,100%)">
+        <g class="pl1__g">
+          <g transform="translate(20,20) rotate(0,44,44)">
+            <g class="pl1__rect-g">
+              <rect height="40" width="40" ry="8" rx="8" class="pl1__rect"></rect>
+              <rect transform="translate(0,48)" height="40" width="40" ry="8" rx="8" class="pl1__rect"></rect>
+            </g>
+            <g transform="rotate(180,44,44)" class="pl1__rect-g">
+              <rect height="40" width="40" ry="8" rx="8" class="pl1__rect"></rect>
+              <rect transform="translate(0,48)" height="40" width="40" ry="8" rx="8" class="pl1__rect"></rect>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <div class="scroll-progress"></div>
+  <div class="cursor"></div>
+  <div class="noise"></div>
+  <nav class="navbar">
+
+    <div class="nav-logo magnetic">
+      IVANILSON
+    </div>
+
+    <div class="nav-center">
+
+      <a href="index.html" class="nav-link active magnetic">
+        HOME
+      </a>
+
+      <a href="gallery.html" class="nav-link magnetic">
+        GALLERY
+      </a>
+
+      <a href="about.html" class="nav-link magnetic">
+        ABOUT
+      </a>
+
+    </div>
+
+    <div class="nav-status">
+      <div class="status-dot"></div>
+      AVAILABLE
+    </div>
+
+  </nav>
+
+  <canvas id="bg"></canvas>
+
+  <section class="hero">
+
+      <!-- VIDEO -->
+
+      <video autoplay muted loop playsinline>
+
+          <source src="assets/videos/showreel.mp4" type="video/mp4">
+
+      </video>
+
+      <!-- OVERLAY -->
+
+      <div class="overlay"></div>
+
+      <!-- DEPTH -->
+
+      <div class="hero-depth depth-1"></div>
+      <div class="hero-depth depth-2"></div>
+      <div class="hero-depth depth-3"></div>
+
+      <!-- CONTENT -->
+
+      <div class="hero-content">
+
+          <h1>
+              CG ARTIST
+          </h1>
+
+          <p class="hero-subtitle">
+              Motion Design • 3D Art
+          </p>
+
+          <div class="hero-buttons">
+
+              <a href="gallery.html" class="btn">
+                  VIEW GALLERY
+              </a>
+
+              <a href="about.html" class="btn-secondary magnetic">
+                  ABOUT ME
+              </a>
+
+          </div>
+
+      </div>
+
+  </section>
+  <!--  <section class="story-section">
+
+      <div class="story-left">
+
+          <div class="story-number">
+              01
+          </div>
+
+          <h2 class="story-title">
+              Creating cinematic visual experiences.
+          </h2>
+
+      </div>
+
+      <div class="story-right">
+
+          <p>
+              Specialized in motion graphics,
+              visual effects and immersive
+              3D environments.
+          </p>
+
+      </div>
+
+  </section>
+  -->
+  
+  <section class="horizontal-section">
+
+    <div class="horizontal-track content">
+
+      <div class="panel pi1"><div style="filter: brightness(10);">MOTION DESIGN</div></div>
+      <div class="panel pi2"><div style="filter: brightness(10);">3D ART</div></div>
+      <div class="panel pi3"><div style="filter: brightness(10);">VFX</div></div>
+
+    </div>
+
+  </section>
+  
+  <section class="reveal-section">
+
+    <h2 class="reveal content">
+      Crafting cinematic visual experiences through motion design, visual effects and 3D artistry.
+    </h2>
+
+  </section>
+  <footer class="footer-container">
+    <div class="wrapper">
+
+        <div class="itemLeft item1"></div>
+        <div class="itemLeft item2"></div>
+        <div class="itemLeft item3"></div>
+        <div class="itemLeft item4"></div>
+        <div class="itemLeft item5"></div>
+        <div class="itemLeft item6"></div>
+        <div class="itemLeft item7"></div>
+        <div class="itemLeft item8"></div>
+
+    </div>
+    <div class="wrapper">
+
+        <div class="itemRight item9"></div>
+        <div class="itemRight item10"></div>
+        <div class="itemRight item11"></div>
+        <div class="itemRight item12"></div>
+        <div class="itemRight item13"></div>
+        <div class="itemRight item14"></div>
+        <div class="itemRight item15"></div>
+        <div class="itemRight item16"></div>
+
+    </div>
+    <div class="wrapper">
+
+        <div class="itemLeft item17"></div>
+        <div class="itemLeft item18"></div>
+        <div class="itemLeft item19"></div>
+        <div class="itemLeft item20"></div>
+        <div class="itemLeft item21"></div>
+        <div class="itemLeft item22"></div>
+        <div class="itemLeft item23"></div>
+        <div class="itemLeft item24"></div>
+
+    </div>
+  </footer>
+
+  <script src="js/script copy.js"></script>
+  <script type="module" src="js/three-background.js"></script>
+  <script src="js/page-transition.js"></script>
+
+</body>
+</html>

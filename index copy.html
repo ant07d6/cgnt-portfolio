@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Ivanilson António is a Motion Designer, VFX Artist and 3D Artist focused on creating modern cinematic visuals, immersive experiences and emotionally driven digital storytelling.">
+  <meta name="keywords" content="Motion Designer, motion graphics, cg, blender, after effects, cinematics, vfx, 3d, motion design">
+  <meta name="author" content="Ivanilson António">
+
+  <title>Ivanilson | CG Artist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- SCROLLTRIGGER -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <!-- Lenis -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+  <!-- THREE JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three":"https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <!-- LOADING SCREEN -->
+
+  <div class="loader">
+    <h1>IVANILSON</h1>
+  </div>
+  <div class="scroll-progress"></div>
+  <div class="cursor"></div>
+  <div class="noise"></div>
+  <nav class="navbar">
+
+    <div class="nav-logo magnetic">
+      IVANILSON
+    </div>
+
+    <div class="nav-center">
+
+      <a href="index.html" class="nav-link active magnetic">
+        HOME
+      </a>
+
+      <a href="gallery.html" class="nav-link magnetic">
+        GALLERY
+      </a>
+
+      <a href="about.html" class="nav-link magnetic">
+        ABOUT
+      </a>
+
+    </div>
+
+    <div class="nav-status">
+      <div class="status-dot"></div>
+      AVAILABLE
+    </div>
+
+  </nav>
+
+  <canvas id="bg"></canvas>
+
+  <section class="hero">
+
+      <!-- VIDEO -->
+
+      <video autoplay muted loop playsinline>
+
+          <source src="assets/videos/showreel.mp4" type="video/mp4">
+
+      </video>
+
+      <!-- OVERLAY -->
+
+      <div class="overlay"></div>
+
+      <!-- DEPTH -->
+
+      <div class="hero-depth depth-1"></div>
+      <div class="hero-depth depth-2"></div>
+      <div class="hero-depth depth-3"></div>
+
+      <!-- CONTENT -->
+
+      <div class="hero-content">
+
+          <h1>
+              CG ARTIST
+          </h1>
+
+          <p class="hero-subtitle">
+              Motion Design • VFX • 3D Art
+          </p>
+
+          <div class="hero-buttons">
+
+              <a href="gallery.html" class="btn">
+                  VIEW GALLERY
+              </a>
+
+              <a href="about.html" class="btn-secondary magnetic">
+                  ABOUT ME
+              </a>
+
+          </div>
+
+      </div>
+
+  </section>
+  <!--  <section class="story-section">
+
+      <div class="story-left">
+
+          <div class="story-number">
+              01
+          </div>
+
+          <h2 class="story-title">
+              Creating cinematic visual experiences.
+          </h2>
+
+      </div>
+
+      <div class="story-right">
+
+          <p>
+              Specialized in motion graphics,
+              visual effects and immersive
+              3D environments.
+          </p>
+
+      </div>
+
+  </section>
+  -->
+  
+  <section class="horizontal-section">
+
+    <div class="horizontal-track content">
+
+      <div class="panel">MOTION DESIGN</div>
+      <div class="panel">VFX</div>
+      <div class="panel">3D ART</div>
+      <div class="panel">CINEMATICS</div>
+
+    </div>
+
+  </section>
+  
+  <section class="reveal-section">
+
+    <h2 class="reveal content">
+      Creating cinematic visuals through motion,
+      visual effects and 3D art.
+    </h2>
+
+  </section>
+  <script src="js/script copy.js"></script>
+  <script type="module" src="js/three-background.js"></script>
+  <script src="js/page-transition.js"></script>
+
+</body>
+</html>

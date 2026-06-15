@@ -1,0 +1,208 @@
+/* =========================================================
+LAPTOP
+========================================================= */
+
+@media(max-width:1200px){
+
+    .horizontal-section{
+        height:300vh;
+    }
+
+    .panel{
+        font-size:
+        clamp(42px,7vw,90px);
+    }
+
+    .adaptive-grid{
+        grid-template-columns:
+        repeat(6,1fr);
+    }
+
+    .landscape,
+    .ultra{
+        grid-column:span 6;
+    }
+
+    .portrait,
+    .square{
+        grid-column:span 3;
+    }
+
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media(max-width:1100px){
+
+    .about-section{
+        grid-template-columns:1fr;
+        gap:60px;
+    }
+
+    .navbar{
+        padding:0 25px;
+    }
+
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+    .cursor{
+        display:none;
+    }
+
+    .navbar{
+
+        height:72px;
+
+        padding:0 20px;
+
+        border-radius:20px;
+
+    }
+
+    .nav-center{
+        gap:18px;
+    }
+
+    .nav-link{
+
+        font-size:11px;
+
+        letter-spacing:0.15em;
+
+    }
+
+    .nav-status{
+        display:none;
+    }
+
+    .hero{
+
+        min-height:100svh;
+    }
+
+    .hero-content{
+
+        justify-content:flex-end;
+
+        padding-top:80px;
+        padding-bottom:120px;
+
+    }
+
+    .hero h1{
+        max-width:7ch;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .btn,
+    .btn-secondary,
+    .cv-button{
+
+        width:100%;
+
+    }
+
+    .horizontal-section{
+        height:auto;
+    }
+
+    .horizontal-track{
+
+        position:relative;
+
+        flex-direction:column;
+
+        height:auto;
+
+    }
+
+    .panel{
+
+        min-width:100%;
+
+        height:70vh;
+
+        border-right:none;
+
+        border-bottom:
+        1px solid rgba(255,255,255,0.05);
+
+        font-size:
+        clamp(34px,10vw,62px);
+
+    }
+
+    .adaptive-grid{
+
+        grid-template-columns:1fr;
+
+        grid-auto-rows:260px;
+
+    }
+
+    .landscape,
+    .ultra,
+    .portrait,
+    .square{
+
+        grid-column:span 1;
+        grid-row:span 1;
+
+    }
+
+    .video-info{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+/* =========================================================
+SMALL MOBILE
+========================================================= */
+
+@media(max-width:480px){
+
+    .panel{
+
+        height:60vh;
+
+        padding:20px;
+
+        font-size:12vw;
+
+    }
+
+}
+
+/* =========================================================
+ULTRAWIDE
+========================================================= */
+
+@media(min-width:2200px){
+
+    :root{
+
+        --container:min(1800px,80vw);
+
+    }
+
+}

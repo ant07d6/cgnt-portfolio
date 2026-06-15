@@ -1,0 +1,320 @@
+/* =========================================================
+NAV LINK
+========================================================= */
+
+.nav-link{
+
+    position:relative;
+
+    opacity:0.65;
+
+    font-size:var(--text-xs);
+
+    letter-spacing:0.3em;
+
+    transition:0.4s;
+
+}
+
+.nav-link:hover,
+.nav-link.active{
+
+    opacity:1;
+
+}
+
+.nav-link::after{
+
+    content:'';
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0%;
+
+    height:1px;
+
+    background:white;
+
+    transition:
+    width 0.5s cubic-bezier(.19,1,.22,1);
+
+}
+
+.nav-link:hover::after,
+.nav-link.active::after{
+
+    width:100%;
+
+}
+
+/* =========================================================
+BUTTONS
+========================================================= */
+
+.btn,
+.btn-secondary,
+.cv-button{
+
+    display:inline-flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:
+    20px 42px;
+
+    border-radius:100px;
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    background:
+    rgba(255,255,255,0.04);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    font-size:var(--text-xs);
+
+    letter-spacing:0.2em;
+
+    transition:
+    transform 0.5s cubic-bezier(.19,1,.22,1),
+    background 0.5s,
+    color 0.5s;
+
+}
+
+.btn:hover,
+.btn-secondary:hover,
+.cv-button:hover{
+
+    background:white;
+
+    color:black;
+
+    transform:translateY(-6px);
+
+}
+
+/* =========================================================
+STACK ITEM
+========================================================= */
+
+.stack-item{
+
+    padding:16px 22px;
+
+    border-radius:100px;
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    background:
+    rgba(255,255,255,0.03);
+
+    transition:
+    transform 0.5s cubic-bezier(.19,1,.22,1),
+    background 0.5s,
+    color 0.5s;
+
+}
+
+.stack-item:hover{
+
+    background:white;
+
+    color:black;
+
+    transform:translateY(-5px);
+
+}
+
+/* =========================================================
+VIDEO CARD
+========================================================= */
+
+.video-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    background:#0d0d0d;
+
+    border:
+    1px solid rgba(255,255,255,0.05);
+
+    cursor:pointer;
+
+    transition:
+    transform 0.8s cubic-bezier(.19,1,.22,1),
+    border-color 0.8s,
+    box-shadow 0.8s;
+
+}
+
+.video-card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.01);
+
+    border-color:
+    rgba(255,255,255,0.12);
+
+    box-shadow:
+    var(--shadow-glow);
+
+}
+
+.video-card video{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+    transform 1.4s cubic-bezier(.19,1,.22,1),
+    filter 1s;
+
+}
+
+.video-card:hover video{
+
+    transform:scale(1.06);
+
+    filter:
+    brightness(1.05)
+    contrast(1.05);
+
+}
+
+/* =========================================================
+VIDEO INFO
+========================================================= */
+
+.video-info{
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+
+    padding:
+    clamp(20px,2vw,40px);
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0.92),
+        transparent
+    );
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+    0.8s cubic-bezier(.19,1,.22,1);
+
+}
+
+.video-card:hover .video-info{
+
+    opacity:1;
+
+    transform:translateY(0px);
+
+}
+
+.video-info h3{
+
+    font-size:
+    clamp(24px,3vw,42px);
+
+    margin-bottom:8px;
+
+}
+
+.video-info p{
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    opacity:0.65;
+
+}
+
+/* =========================================================
+SOFTWARE CARD
+========================================================= */
+
+.software-card{
+
+    position:relative;
+
+    aspect-ratio:1/1;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:32px;
+
+    border:
+    1px solid rgba(255,255,255,0.06);
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.02)
+    );
+
+    transition:
+    transform 0.8s cubic-bezier(.19,1,.22,1),
+    border-color 0.8s;
+
+}
+
+.software-card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.02);
+
+    border-color:
+    rgba(255,255,255,0.14);
+
+}
+
+.software-card img{
+
+    width:90px;
+
+    transition:
+    transform 0.8s,
+    filter 0.8s;
+
+}
+
+.software-card:hover img{
+
+    transform:scale(1.12);
+
+    filter:brightness(1.2);
+
+}
